@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Domfete Society</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- header (same as index) -->
+  <header class="main-header">
+    <div class="header-left">
+      <img src="images/methodis logo.png" class="header-logo" alt="logo">
+      <div class="header-text"><h1>Methodist Church Ghana</h1><p>Domfete Society</p></div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:14px">
+      <nav class="navbar"><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="organisations.html">Organisations</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <div class="scroll-text"><span>Welcome to Methodist Church Ghana — Domfete Society • Sunday Service: 8:00 AM • Bible Study: Wed 6:00 PM</span></div>
+
+  <main style="padding:30px 18px;max-width:1000px;margin:0 auto">
+    <h2 class="section-title">About Us</h2>
+
+    <div class="org-container">
+      <div class="org-card reveal">
+        <div class="org-image"><img src="images/c3.jpg" alt="About"></div>
+        <div class="org-content">
+          <h2>Domfete Society — Methodist Church Ghana</h2>
+          <p>
+            <p><strong style="color: #cfa300;">Our Story:</strong></p>
+            The Domfete Society of the Methodist Church Ghana is a vibrant and growing Christian community within the Jinijini Circuit,
+            dedicated to spreading the Gospel of Jesus Christ and transforming lives through worship, service, and fellowship.Over the years, the Society has become a strong spiritual home for believers in the Domfete community and its surrounding areas.
+            <p><strong style="color: #cfa300;">Mission:</strong></p> To bring people to the saving knowledge of Christ, nurture believers, and impact the community through
+            evangelism and service. <p><strong style="color: #cfa300;">Vision:</strong></p> To be a spiritually mature, united and mission-focused Society that transforms lives.
+            
+          </p>
+          <p>
+            Spiritual life includes Sunday divine services, Bible studies, youth meetings, and outreach programs. The Church is committed
+            to supporting education, health awareness, and community outreach.
+          </p>
+            <p><strong style="color: #cfa300;">Core Values:</strong><p>
+           <p> .Faithfulness - standing the in word of God<br> 
+            .Love- Demonstrating Chrislike compassion to all<br> . Unity-Working together as one Body in Christ<br> .Serving God and humanity with humility<br> .Discipline-Upholding Methodist doctrines and order 
+            </p>
+        </div>
+        <div class="org-logo"><img src="images/methodis logo.png" alt=""></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-section"><h3>Methodist Church Ghana</h3><p>Domfete Society</p></div>
+      <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="organisations.html">Organisations</a></li></ul></div>
+      <div class="footer-section"><h4>Follow Us</h4><div class="social-icons"><a href="#"><img src="images/facebook.jpg" style="width:22px"></a></div></div>
+    </div>
+    <div class="footer-bottom">© 2025 Domfete Methodist Church. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    function toggleMenu(){document.querySelector(".navbar ul").classList.toggle("active")}
+    function reveal(){
+      let reveals=document.querySelectorAll(".reveal");
+      for(let r of reveals){ if(r.getBoundingClientRect().top < window.innerHeight-80) r.classList.add("active"); }
+    }
+    window.addEventListener("scroll",reveal); window.addEventListener("load",reveal);
+  </script>
+</body>
+</html>

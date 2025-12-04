@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Organisations — Domfete Society</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-left">
+      <img src="images/methodis logo.png" class="header-logo" alt="logo">
+      <div class="header-text"><h1>Methodist Church Ghana</h1><p>Domfete Society</p></div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:14px">
+      <nav class="navbar"><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="organisations.html" class="active">Organisations</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <div class="scroll-text"><span>Our Organisations — Serving through Worship, Fellowship & Service</span></div>
+
+  <h2 class="section-title">Our Organisations</h2>
+  <section class="org-container">
+
+    <!-- Women (example) -->
+    <div class="org-card reveal">
+      <div class="org-image"><img src="images/women.jpg" alt="Women"></div>
+      <div class="org-content">
+        <h2>Women’s Fellowship</h2>
+        <p>Established in 2005 to support spiritual growth of women and promote unity, prayer and service.</p>
+      </div>
+      <div class="org-logo"><img src="images/women  logo.png" alt=""></div>
+    </div>
+
+    <!-- Christ little band -->
+    <div class="org-card reveal">
+      <div class="org-image"><img src="images/christ.jpg" alt="CLB"></div>
+      <div class="org-content">
+        <h2>Christ Little Band</h2>
+        <p>Children’s ministry focused on character and spiritual training through music and worship.</p>
+      </div>
+      <div class="org-logo"><img src="images/christ logo.jpg" alt=""></div>
+    </div>
+
+    <!-- Youth -->
+    <div class="org-card reveal">
+      <div class="org-image"><img src="images/youth.jpg" alt="Youth"></div>
+      <div class="org-content">
+        <h2>Youth Fellowship</h2>
+        <p>Developing Christian youth through leadership, Bible study and active service in the church.</p>
+      </div>
+      <div class="org-logo"><img src="images/youth logo.jpg" alt=""></div>
+    </div>
+
+    <!-- Girl's -->
+    <div class="org-card reveal">
+      <div class="org-image"><img src="images/g2.jpg" alt="Girls"></div>
+      <div class="org-content">
+        <h2>Girl’s Fellowship</h2>
+        <p>Training young girls in Christian discipline, moral values and leadership to build responsible future women.</p>
+      </div>
+      <div class="org-logo"><img src="images/girls logo.jpg" alt=""></div>
+    </div>
+
+    <!-- Children -->
+    <div class="org-card reveal">
+      <div class="org-image"><img src="images/sundaysch.jpg" alt="Children"></div>
+      <div class="org-content">
+        <h2>Children’s Ministry</h2>
+        <p>Strong Christian foundation through Bible stories, songs, worship and fun activities.</p>
+      </div>
+      <div class="org-logo"><img src="images/sundaysch logo.jpg" alt=""></div>
+    </div>
+
+    <!-- SUMA -->
+    <div class="org-card reveal">
+      <div class="org-image"><img src="images/suma.jpg" alt="SUMA"></div>
+      <div class="org-content">
+        <h2>SUMA</h2>
+        <p>Fellowship for women, focusing on spiritual empowerment, family life, prayer and service.</p>
+      </div>
+      <div class="org-logo"><img src="images/suma logo.jpg" alt=""></div>
+    </div>
+
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-section"><h3>Methodist Church Ghana</h3><p>Domfete Society</p></div>
+      <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div class="footer-section"><h4>Follow Us</h4><div class="social-icons"><a href="#"><img src="images/facebook.jpg" style="width:22px"></a></div></div>
+    </div>
+    <div class="footer-bottom">© 2025 Domfete Methodist Church. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    function toggleMenu(){document.querySelector(".navbar ul").classList.toggle("active")}
+    function reveal(){let r=document.querySelectorAll(".reveal");for(let el of r){if(el.getBoundingClientRect().top < window.innerHeight-80) el.classList.add("active")}}
+    window.addEventListener("scroll",reveal); window.addEventListener("load",reveal);
+  </script>
+</body>
+</html>

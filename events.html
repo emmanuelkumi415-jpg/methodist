@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Events — Domfete Society</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-left">
+      <img src="images/methodis logo.png" class="header-logo" alt="logo">
+      <div class="header-text"><h1>Methodist Church Ghana</h1><p>Domfete Society</p></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px">
+      <nav class="navbar"><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="organisations.html">Organisations</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <div class="scroll-text"><span>See our upcoming services, conventions and special programs.</span></div>
+
+  <main style="max-width:1000px;margin:30px auto;padding:0 18px">
+    <h2 class="section-title">Upcoming Events</h2>
+
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div class="card reveal">
+        <img src="images/c4.jpg" alt="">
+        <div class="card-body"><h3>Sunday Divine Service — Weekly</h3><p>Every Sunday, 8:00 AM — Join us for worship and preaching.</p></div>
+      </div>
+
+      <div class="card reveal">
+        <img src="images/biblestudies.jpg" alt="">
+        <div class="card-body"><h3>Bible Study — Wednesdays</h3><p>Weekly Bible Study every Wednesday at 6:00 PM.</p></div>
+      </div>
+
+      <div class="card reveal">
+        <img src="images/annual.jpg" alt="">
+        <div class="card-body"><h3>Annual Harvest / Convention</h3><p>Dates announced — big gathering with fellowship and programs.</p></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content"><div class="footer-section"><h3>Methodist Church Ghana</h3><p>Domfete Society</p></div><div class="footer-section"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li></ul></div><div class="footer-section"><h4>Follow Us</h4><div class="social-icons"><a href="#"><img src="images/facebook.jpg" style="width:22px"></a></div></div></div>
+    <div class="footer-bottom">© 2025 Domfete Methodist Church. All Rights Reserved.</div>
+  </footer>
+
+  <script>function toggleMenu(){document.querySelector(".navbar ul").classList.toggle("active")}function reveal(){let r=document.querySelectorAll(".reveal");for(let el of r){if(el.getBoundingClientRect().top < window.innerHeight-80) el.classList.add("active")}}window.addEventListener("scroll",reveal);window.addEventListener("load",reveal);</script>
+</body>
+</html>

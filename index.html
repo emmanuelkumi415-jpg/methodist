@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Methodist Church Ghana — Domfete Society</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-left">
+      <img src="images/methodis logo.png" class="header-logo" alt="logo">
+      <div class="header-text">
+        <h1>Methodist Church Ghana</h1>
+        <p>Domfete Society</p>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:14px">
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="organisations.html">Organisations</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <!-- SCROLLING ANNOUNCE -->
+  <div class="scroll-text"><span>Welcome to Methodist Church Ghana — Domfete Society • Sunday Service: 8:00 AM • Bible Study: Wed 6:00 PM</span></div>
+
+  <!-- SLIDESHOW -->
+  <div class="slideshow-container">
+    <div class="slide fade"><img src="images/eis.jpg" alt=""><div class="slide-text">Welcome to Domfete Methodist Church</div></div>
+    <div class="slide fade"><img src="images/women.jpg" alt=""><div class="slide-text">Growing in Christ Together</div></div>
+    <div class="slide fade"><img src="images/Youth.jpg" alt=""><div class="slide-text">Service to God and Community</div></div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Welcome to the Methodist Church Ghana, Domfete Society</h1>
+    <p>We exist to worship God, grow disciples and serve our community with Christlike love. Join us for worship, Bible study and fellowship.</p>
+  </section>
+
+  <!-- LATEST GALLERY -->
+  <h2 class="section-title">Latest Gallery</h2>
+  <div class="gallery-grid" id="gallery">
+    <!-- Replace image filenames with your actual files -->
+    <div class="card reveal"><img src="images/4.jpg" alt=""><div class="card-body"><h3>Sunday Service</h3></div></div>
+    <div class="card reveal"><img src="images/45.jpg" alt=""><div class="card-body"><h3>Youth Fellowship</h3></div></div>
+    <div class="card reveal"><img src="images/women.jpg" alt=""><div class="card-body"><h3>Women’s Fellowship</h3></div></div>
+    <div class="card reveal"><img src="images/1.jpg" alt=""><div class="card-body"><h3>Children’s Program</h3></div></div>
+    <div class="card reveal"><img src="images/5.jpg" alt=""><div class="card-body"><h3>Special Event</h3></div></div>
+    <div class="card reveal"><img src="images/2.jpg" alt=""><div class="card-body"><h3>Choir</h3></div></div>
+     <div class="card reveal"><img src="images/y4.jpg" alt=""><div class="card-body"><h3>MYF</h3></div></div>
+      <div class="card reveal"><img src="images/g3.jpg" alt=""><div class="card-body"><h3>MGF</h3></div></div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-section"><h3>Methodist Church Ghana</h3><p>Domfete Society</p></div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="organisations.html">Organisations</a></li><li><a href="events.html">Events</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook.jpg" style="width:22px"></a>
+          <a href="#"><img src="images/WhatsApp Image .jpg" style="width:22px"></a>
+          <a href="#"><img src="images/tictok.jpg" style="width:22px"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Domfete Methodist Church. All Rights Reserved.</div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // slideshow
+    let slideIndex = 0;
+    function showSlides(){
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      for(i=0;i<slides.length;i++){slides[i].style.display="none";}
+      slideIndex++;
+      if(slideIndex>slides.length){slideIndex=1}
+      if(slides[slideIndex-1]) slides[slideIndex-1].style.display="block";
+      setTimeout(showSlides,4200);
+    }
+    showSlides();
+
+    // mobile menu
+    function toggleMenu(){
+      document.querySelector(".navbar ul").classList.toggle("active");
+    }
+
+    // reveal on scroll
+    function reveal(){
+      let reveals = document.querySelectorAll(".reveal");
+      for(let i=0;i<reveals.length;i++){
+        let top = reveals[i].getBoundingClientRect().top;
+        if(top < window.innerHeight - 80) reveals[i].classList.add("active");
+      }
+    }
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("load", reveal);
+  </script>
+</body>
+</html>
